@@ -6,6 +6,7 @@
 #ifdef _USE_ICONV
 #include <iconv.h>
 #endif
+#include <execinfo.h>
 #endif
 using namespace std;
 

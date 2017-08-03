@@ -45,6 +45,8 @@ typedef int SOCK_T;
 
 //#define _USE_ICONV
 
+typedef pthread_t THREAD_HANDLE;
+
 #elif defined( KOS_WIN32 )
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
@@ -54,6 +56,8 @@ typedef int SOCK_T;
 typedef SOCKET SOCK_T;
 #define SOCK_ERROR SOCKET_ERROR
 #define INVALID_SOCK INVALID_SOCKET
+
+typedef HANDLE THREAD_HANDLE;
 #endif
 using namespace std;
 
