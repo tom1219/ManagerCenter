@@ -78,6 +78,8 @@ SOCK_T Sock::create( const string& host, WORD port )
 		{
 			break;
 		}
+
+		return sock;
 	} while(false);
 
 	if ( INVALID_SOCK != sock )
