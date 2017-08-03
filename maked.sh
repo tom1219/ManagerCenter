@@ -3,4 +3,4 @@ aclocal
 autoheader
 autoconf
 automake --add-missing
-./configure CXXFLAGS="-g -O0 -std=c++14 -D__DEBUG" CFLAGS="-g -O0 -std=c++14 -D__DEBUG"
+./configure CXXFLAGS="-g -O0 -D__DEBUG" CFLAGS="-g -O0 -D__DEBUG"

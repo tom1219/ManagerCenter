@@ -3,4 +3,4 @@ aclocal
 autoheader
 autoconf
 automake --add-missing
-./configure CXXFLAGS="-O2 -std=c++14" CFLAGS="-O2 -std=c++14"
+./configure CXXFLAGS="-O2" CFLAGS="-O2"

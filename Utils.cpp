@@ -7,6 +7,7 @@
 #include <iconv.h>
 #endif
 #include <execinfo.h>
+#include <stdarg.h>
 #endif
 using namespace std;
 

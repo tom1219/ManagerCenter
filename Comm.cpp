@@ -12,7 +12,7 @@ CComm::CComm( SOCK_T sock )
 : _sock(sock)
 , _sendBuf(NULL)
 , _recvBuf(NULL)
-, _event(NULL);
+, _event(NULL)
 , _stop(false)
 {
 	_sendBuf = new CTcpBuf;
@@ -104,13 +104,13 @@ void CComm::pushSend( char* buf, int len )
 }
 bool CComm::popRecv( string& data )
 {
-	size = _recvBuf->getDataSize();
+	int size = _recvBuf->getDataSize();
 	char* recvData = _recvBuf->getData();
 	if ( size > 0 )
 	{
 		data.append( recvData, size );
 		_recvBuf->erase( size );
-		return bool;
+		return true;
 	}
 	else
 	{
