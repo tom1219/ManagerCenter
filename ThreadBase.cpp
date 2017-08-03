@@ -43,7 +43,7 @@ void CThreadBase::stop( bool wait )
 void CThreadBase::waitForStop()
 {
 #if defined(KOS_LINUX) || defined(KOS_MACOS)
-	pthread_join(_handle);
+	pthread_join(_handle, NULL);
 #elif defined(KOS_WIN32)
 	WaitForSingleObject( _handle, INFINITE );
 #endif

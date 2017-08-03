@@ -8,6 +8,9 @@
 #include <sys/epoll.h>
 #include <fcntl.h>
 #include "sock.h"
+#include "LogCache.h"
+#include "Log.h"
+#include "Comm.h"
 
 const int MAX_EPOLL = 10240;
 const int MAX_FD = 1000;
@@ -24,7 +27,7 @@ CMainThread::~CMainThread()
 
 bool CMainThread::start()
 {
-	_logCache = new CLogCache();
+	_logCache = new LogCache();
 	_ep = epoll_create( MAX_EPOLL );
 	_sock = Sock::create( "", PORT );
 	ASSERT1( INVALID_SOCK != _sock, false );

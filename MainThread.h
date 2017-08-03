@@ -9,7 +9,7 @@
 #include "sharelib.h"
 #include "ThreadBase.h"
 
-class CLogCache;
+class LogCache;
 class CMainThread : public CThreadBase
 {
 public:
@@ -24,7 +24,7 @@ protected:
 private:
 	int _ep;
 	SOCK_T _sock;
-	CLogCache* _logCache;
+	LogCache* _logCache;
 };
 
 #endif //_MAIN_THREAD_H_

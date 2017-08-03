@@ -31,10 +31,9 @@ private:
 	static unsigned int __stdcall threadProcEntry( PVOID p );
 #endif
 
-private:
+protected:
 	THREAD_HANDLE _handle;
 	bool _stop;
-protected:
 	bool _stopped;
 };
 
